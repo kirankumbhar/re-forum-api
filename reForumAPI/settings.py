@@ -54,8 +54,9 @@ REST_FRAMEWORK = {
     ),
     "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
 }
-
-ACCESS_TOKEN_LIFETIME = datetime.timedelta(days=1)
+SIMPLE_JWT = {
+'ACCESS_TOKEN_LIFETIME' : datetime.timedelta(days=1)
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
